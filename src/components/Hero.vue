@@ -1,6 +1,6 @@
 <template>
 <div class="bg-black w-full h-screen flex-col flex relative lg:(flex-row-reverse justify-end)">
-    <div class="    lg:text-right flex-shrink-0">
+    <div class="    lg:text-right flex-shrink-0 bg-green-500">
         <h1 class="hero-text">Moin Leude</h1>
         <h2 class="hero-text">Stefan hier</h2>
     </div>
@@ -17,7 +17,8 @@
 
 .hero-text{
     @apply text-white text-8xl p-5;
-    /* font-size: */
+    font-size: 10rem;
+    font-family:Luckiest Guy;
 }
 
 
