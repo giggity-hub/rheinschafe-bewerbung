@@ -4,6 +4,7 @@
 import HelloWorld from './components/HelloWorld.vue'
 import Hero from './components/Hero.vue';
 import IchBin from './components/IchBin.vue';
+import CuriculumVitae from './components/CuriculumVitae.vue';
 </script>
 
 <template>
@@ -11,6 +12,7 @@ import IchBin from './components/IchBin.vue';
   <HelloWorld msg="Hello Vue 3 + Vite" /> -->
   <Hero/>
   <IchBin/>
+  <CuriculumVitae/>
 </template>
 
 <style>
