@@ -5,6 +5,8 @@ import HelloWorld from './components/HelloWorld.vue'
 import Hero from './components/Hero.vue';
 import IchBin from './components/IchBin.vue';
 import CuriculumVitae from './components/CuriculumVitae.vue';
+import KuhriculumVitae from './components/KuhriculumVitae/index.vue';
+import SkillCards from './components/SkillCards/index.vue';
 </script>
 
 <template>
@@ -12,7 +14,9 @@ import CuriculumVitae from './components/CuriculumVitae.vue';
   <HelloWorld msg="Hello Vue 3 + Vite" /> -->
   <Hero/>
   <IchBin/>
-  <CuriculumVitae/>
+  <!-- <CuriculumVitae/> -->
+  <KuhriculumVitae/>
+  <SkillCards/>
 </template>
 
 <style>

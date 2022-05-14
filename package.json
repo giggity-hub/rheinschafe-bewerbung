@@ -8,8 +8,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "animejs": "^3.2.1",
+    "fullpage.js": "^4.0.7",
+    "gsap": "^3.10.4",
+    "path-data-polyfill": "^1.0.3",
+    "svgjson": "^2.2.2",
     "vite-plugin-windicss": "^1.8.4",
     "vue": "^3.2.25",
+    "vue-fullpage.js": "^0.2.3",
     "windicss": "^3.5.2"
   },
   "devDependencies": {

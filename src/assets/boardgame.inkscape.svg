@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="173.63303mm"
+   height="167.96248mm"
+   viewBox="0 0 173.63303 167.96248"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="boardgame.inkscape.svg"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <style
+     id="style10077">.field {  }
+.motion-path {  }
+</style>
+  <sodipodi:namedview
+     id="namedview16"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.50898197"
+     inkscape:cx="584.50008"
+     inkscape:cy="397.853"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     id="layer1"
+     transform="translate(-32.464112,-68.308175)">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.11085;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:6.33254, 6.33254;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 40.793091,130.38526 C 64.857431,116.83185 97.134589,114.96696 116.59829,117.15509"
+       id="path-0"
+       sodipodi:nodetypes="cc"
+       class="motion-path" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:2.11085;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:6.33254, 6.33254;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 116.59829,117.15509 C 116.59829,117.15509 182.89284,140.23408 129.43829,149.95309 75.983749,159.6721 130.92988,186.70762 130.92988,186.70762"
+       id="path-1"
+       sodipodi:nodetypes="csc"
+       class="motion-path" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.11085;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:6.33254, 6.33254;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 130.92988,186.70762 C 156.04624,201.14874 192.23164,183.23088 199.99417,156.5105"
+       id="path-2"
+       sodipodi:nodetypes="cc"
+       class="motion-path" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.11085;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:6.33254, 6.33254;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 199.99417,156.5105 C 216.54943,106.66493 163.46502,54.515786 117.10525,73.164426"
+       id="path-3"
+       sodipodi:nodetypes="cc"
+       class="motion-path" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.11085;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:6.33254, 6.33254;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 70.32068,159.97578 C 67.968854,193.99934 95.899916,228.08545 115.20207,227.75685"
+       id="path-5"
+       sodipodi:nodetypes="cc"
+       class="motion-path" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.11085;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:6.33254, 6.33254;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="M 117.10525,73.164426 C 81.6423,89.608989 69.773213,126.19287 70.32068,159.97578"
+       id="path-4"
+       sodipodi:nodetypes="cc"
+       class="motion-path" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:6.31399px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.15785"
+       x="34.525703"
+       y="140.96773"
+       id="text2113"><tspan
+         id="tspan2111"
+         style="stroke-width:0.15785"
+         x="34.525703"
+         y="140.96773">Schule</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.37476px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.134369"
+       x="107.04007"
+       y="197.54323"
+       id="text5711"><tspan
+         id="tspan5709"
+         style="stroke-width:0.134369"
+         x="107.04007"
+         y="197.54323">Auslandsjahr</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.37476px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.134369"
+       x="107.27644"
+       y="236.1893"
+       id="text5711-9"><tspan
+         id="tspan5709-3"
+         style="stroke-width:0.134369"
+         x="107.27644"
+         y="236.1893">You</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.37476px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.134369"
+       x="50.141483"
+       y="170.46252"
+       id="text5711-8"><tspan
+         id="tspan5709-5"
+         style="stroke-width:0.134369"
+         x="50.141483"
+         y="170.46252">Tutor</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.37476px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.134369"
+       x="188.70233"
+       y="151.44675"
+       id="text5711-3"><tspan
+         id="tspan5709-4"
+         style="stroke-width:0.134369"
+         x="188.70233"
+         y="151.44675">Uni</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.37476px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.134369"
+       x="110.11002"
+       y="109.65154"
+       id="text5711-3-2"><tspan
+         id="tspan5709-4-3"
+         style="stroke-width:0.134369"
+         x="110.11002"
+         y="109.65154">Baumarkt</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.37476px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.134369"
+       x="78.373596"
+       y="77.502914"
+       id="text5711-3-9"><tspan
+         id="tspan5709-4-5"
+         style="stroke-width:0.134369"
+         x="78.373596"
+         y="77.502914">Koch</tspan></text>
+    <ellipse
+       style="fill:#2b0000;stroke:#000000;stroke-width:0.500003"
+       id="field-0"
+       cx="38.687195"
+       cy="130.67294"
+       rx="5.9730816"
+       ry="2.9406457"
+       class="field " />
+    <ellipse
+       style="fill:#2b0000;stroke:#000000;stroke-width:0.500003"
+       id="field-3"
+       cx="199.87405"
+       cy="158.28778"
+       rx="5.9730816"
+       ry="2.9406457"
+       class="field " />
+    <ellipse
+       style="fill:#2b0000;stroke:#000000;stroke-width:0.500003"
+       id="field-5"
+       cx="70.094925"
+       cy="161.1082"
+       rx="5.9730816"
+       ry="2.9406457"
+       class="field " />
+    <ellipse
+       style="fill:#2b0000;stroke:#000000;stroke-width:0.500003"
+       id="field-6"
+       cx="110.98338"
+       cy="227.55493"
+       rx="5.9730816"
+       ry="2.9406457"
+       class="field " />
+    <ellipse
+       style="fill:#2b0000;stroke:#000000;stroke-width:0.500003"
+       id="field-4"
+       cx="117.07727"
+       cy="73.414993"
+       rx="5.9730816"
+       ry="2.9406457"
+       class="field " />
+    <ellipse
+       style="display:inline;fill:#2b0000;stroke:#000000;stroke-width:0.500003"
+       id="field-1"
+       cx="116.9752"
+       cy="117.32231"
+       rx="5.9730816"
+       ry="2.9406457"
+       class="field " />
+    <ellipse
+       style="display:inline;fill:#2b0000;stroke:#000000;stroke-width:0.500003"
+       id="field-2"
+       cx="129.70354"
+       cy="184.7011"
+       rx="5.9730816"
+       ry="2.9406457"
+       class="field " />
+    <ellipse
+       style="fill:#ffff00;stroke:#ff0000;stroke-width:1.18999;stroke-dasharray:3.56997, 3.56997"
+       id="character"
+       cx="39.049522"
+       cy="125.56796"
+       rx="5.6117249"
+       ry="5.0022407" />
+  </g>
+</svg>
