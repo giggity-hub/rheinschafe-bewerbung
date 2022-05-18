@@ -6,29 +6,30 @@ import { onMounted, reactive, ref } from 'vue';
 
     const cardRefs = ref(null);
     const cardIsHover = ref([false, false, false, false]);
-    const isCardSelected = ref([false, false, false, false])
-    const cards = [
+    const isCardDrawn = ref([false, false, false, false])
+    // const isCardActive = ref([false, false, false, false])
+    const cards = ref([
         {
             frontFace: '/skill-cards/placeholder.svg', 
-            backFace: '/skill-cards/placeholder.svg',
-            deafultTransformation: {translateX: '-90%', rotate: '-30deg'}
+            backFace: '/skill-cards/placeholder-back.svg',
+            // deafultTransformation: {translateX: '-90%', rotate: '-30deg'}
         },
         {
             frontFace: '/skill-cards/placeholder.svg', 
-            backFace: '/skill-cards/placeholder.svg',
-            deafultTransformation: {translateX: '-30%', rotate: '-10deg'}
+            backFace: '/skill-cards/placeholder-back.svg',
+            // deafultTransformation: {translateX: '-30%', rotate: '-10deg'}
         },
         {
             frontFace: '/skill-cards/placeholder.svg', 
-            backFace: '/skill-cards/placeholder.svg',
-            deafultTransformation: {translateX: '30%', rotate: '10deg'}
+            backFace: '/skill-cards/placeholder-back.svg',
+            // deafultTransformation: {translateX: '30%', rotate: '10deg'}
         },
         {
             frontFace: '/skill-cards/placeholder.svg', 
-            backFace: '/skill-cards/placeholder.svg',
-            deafultTransformation: {translateX: '90%' , rotate: '30deg'}
+            backFace: '/skill-cards/placeholder-back.svg',
+            // deafultTransformation: {translateX: '90%' , rotate: '30deg'}
         },
-    ]
+    ])
 
     function cardHoverAnimation(index){
         console.log('shishh');
@@ -48,70 +49,141 @@ import { onMounted, reactive, ref } from 'vue';
         cardIsHover.value[index] = isHover;
     }
 
+    // rename to draw
     function selectCardAnimation(index){
         const target = cardRefs.value[index];
         const notTargets = cardRefs.value.filter(ref => ref != target);
-        console.log(target);
-        console.log(notTargets);
+
+        if (isCardDrawn.value[index]) {
+            console.log('soos');
+
+            var tl = anime.timeline({
+            easing: 'linear'
+            });
+            let rotation = cardRestingAngle(index)
+            console.log(rotation);
+            tl.add({
+                targets: target,
+                width: '20%',
+                translateY: '-50%',
+                rotateY: '0deg',
+                scale: 1,
+                // top: 0,
+                duration: 500,
+                rotate: cardRestingAngle(index),
+            })
+            
+            // anime({
+            //     targets: target,
+            //     bottom: 0,
+            //     rotateY: '0deg',
+            //     width: '20%',
+            // })
+
+            // initialPosition(target, index);
+
+
+            return   
+        }
+
+        
+
+
+        // anime.set(target,{
+        //     'transform-origin': 'center center'
+        // })
+
         // set active css variable
-        var tl = anime.timeline();
+        var tl = anime.timeline({
+            easing: 'linear'
+        });
         tl.add({
             targets: target,
             translateX: 0,
-            translateY: 0,
+            translateY: '-200%',
             rotate: 0,
-            // width: '50%',
+            duration: 500,
+        }).add({
+            targets: target,
+            rotateY: '-180deg',
+            // rotateZ: '180deg',
             duration: 1000,
+        }).add({
+            targets: target,
+            width: '90%',
+            // scale: 2.5,
+            translateY: '-300%',
+            // top: 0,
+            duration: 500,
         })
-        isCardSelected.value[index] = true;
+        // cards.value.isDrawn = true;
+        isCardDrawn.value[index] = true;
 
-        // anime()
-        //     translateX: 100,
-        //     translateY: 0,
-        //     rotate: 0,
-        //     duration: 1000,
-        // })
+
+    }
+    function cardRestingAngle(index){
+        const startAngle = -30;
+        const angleStep = 20;
+        const rotation = startAngle + angleStep*index
+        return rotation + 'deg';
+    }
+
+    function initialPosition(cardRef, index){
+        
+        anime({
+            targets: cardRef,
+            rotate: cardRestingAngle(index),
+            translateY: '-50%',
+            bottom: 0,
+        })
     }
 
     onMounted(()=>{
-        let angle = -30;
-        const angleStep = 20;
-        // anime.set(cardRefs.value,{'transform-origin'})
-        cardRefs.value.forEach((ref, index) => {
-            anime({
-                targets: ref,
-                rotate: angle + 'deg',
-                translateY: '-50%',
-                // ...cards[index].deafultTransformation
 
-            })
-            angle += angleStep;
-        });
-        // anime({
-        //     targets: elem.value,
-        //     translateX: '200%'
-        // })
+        // anime.set(cardRefs.value,{'transform-origin'})
+        cardRefs.value.forEach(initialPosition);
+
+
     })
 
 
 
+    const w = 500;
+    const h = 500;
+
+    const cardWidth = 100;
+    const cardHeight = 160;
 </script>
 <template>
 
 <section class="h-screen bg-purple-500 relative">
-    <svg class="w-full max-w-200" viewBox="0 0 500 500">
-        
-        <rect v-for="(card, index) in cards" x="10" y="10" width="100" height="100"/>
-    </svg>
-        <!-- <template v-for="(card, index) in cards" >
-            <div ref="cardRefs" :class="{'is-selected': isCardSelected[index]}" class="skill-card bg-red-500 " 
-                >
-                <img    
-                @click="selectCardAnimation(index)"
-                
-                src="/skill-cards/placeholder.svg" alt="">
+
+    <div class="max-w-100">
+        <div class="bg-red-400 w-full aspect-ratio-box relative ">
+            <div class="absolute top-0 w-full h-full flex items-center justify-center bg-blue-300">
+                <template v-for="(card, index) in cards" >
+                    <div ref="cardRefs" 
+                        @click="selectCardAnimation(index)"
+                        :class="{'is-drawn': isCardDrawn[index]}" class="skill-card ">
+                            
+                            <div class="card__faces">
+                                <!-- <div class="bg-white card__title">asdf</div> -->
+                                <img class="card__face card__face--back" :src="card.backFace" >
+                                <img class="card__face card__face--front" :src="card.frontFace" alt="">
+                            </div>
+                    
+            
+                        
+                    </div>
+                </template>
             </div>
-        </template> -->
+            <!-- <div class="bg-orange-300 absolute top-0">
+                asdfasdfasdf
+            </div> -->
+            
+        </div>
+    </div>
+        
     
 
  
@@ -121,26 +193,75 @@ import { onMounted, reactive, ref } from 'vue';
 </template>
 
 <style>
+.aspect-ratio-box{
+    /* 15:10 Aspect Ratio */
+    padding-top: 150%;
+}
+
+.card__title{
+    position: absolute;
+    transform: translateY(-100%);
+    width: 100%;
+}
+
+
+.skill-card img{
+    position: absolute;
+    backface-visibility: hidden;
+}
+
 .skill-card{
-    @apply w-1/10 absolute left-0 right-0 mx-auto bottom-0;
-    transition: padding .2s ease-in-out;
-    transform-origin: bottom;
-    max-width: 500px;
-    max-height: 100%;
-    /* border: 2px solid black; */
-    /* transform: translateX(var(--translate-x)) rotate(var(--rotation)) translateY(var(--translate-y)); */
-}
-
-.skill-card:hover{
+    /* @apply  absolute ; */
+    position: absolute;
     
-    padding-bottom: 50px;
+    transform-origin: bottom;
+    /* height: 50px; */
+    height: 25%;
+    width: 25%;
+    transform-style: preserve-3d;
+    perspective: 20px;
+
+    background: black;
 }
 
-.skill-card.is-selected{
+.card__faces{
+    /* position: absolute; */
+    /* height: 100px;
+    width: 100px; */
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform .25s ease-in-out;
+    
+
+}
+
+.card__face--back{
+    transform: rotateY(180deg);
+    /* position: absolute; */
+}
+.card__face--front{
+    /* transform: translateY(100%); */
+}
+
+
+
+.skill-card img{
+    /* border: 2px solid black; */
+}
+.skill-card:hover .card__faces{
+    
+    transform: translateY(-20%);
+}
+.skill-card.is-drawn .card__faces{
+    transform: none;
+}
+
+/* .skill-card.is-drawn{
     z-index: 10;
     width: 100%;
 
-}
+} */
 
 /* .skill-card:hover{
     --translate-y: -10%;
