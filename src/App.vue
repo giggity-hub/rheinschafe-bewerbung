@@ -7,6 +7,7 @@ import IchBin from './components/IchBin.vue';
 import CuriculumVitae from './components/CuriculumVitae.vue';
 import KuhriculumVitae from './components/KuhriculumVitae/index.vue';
 import SkillCards from './components/SkillCards/index.vue';
+import SkillCardsVector from './components/SkillCardsVector/index.vue';
 </script>
 
 <template>
@@ -16,10 +17,21 @@ import SkillCards from './components/SkillCards/index.vue';
   <IchBin/>
   <!-- <CuriculumVitae/> -->
   <KuhriculumVitae/>
-  <SkillCards/>
+  <!-- <SkillCards/> -->
+  <SkillCardsVector/>
+  
+  askdfhjalsdkfjh
 </template>
 
 <style>
+
+/* .soos{
+  padding-top: 100%;
+}
+.saas{
+  position: absolute;
+  top:0;
+} */
 /* #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

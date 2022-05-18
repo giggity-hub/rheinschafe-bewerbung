@@ -121,7 +121,7 @@ export default {
 
 
 
-<svg class="w-full absolute top-0 hidden pointer-events-none" viewBox="0 0 210 297">
+<svg class="w-full absolute top-0 hidden pointer-events-none"  viewBox="0 0 210 297">
    <path ref="motionPath"  />
 </svg>
 
@@ -129,8 +129,7 @@ export default {
 
 <svg
    class="w-full"
-   width="173.63303mm"
-   height="167.96248mm"
+
    viewBox="0 0 173.63303 167.96248"
    version="1.1"
    id="svg5"
