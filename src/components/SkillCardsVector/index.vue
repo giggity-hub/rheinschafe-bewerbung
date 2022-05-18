@@ -5,6 +5,7 @@ import gsap from "gsap";
 
 const skillCardRefs = ref([]);
 const isHover = [false, false, false, false];
+let isAnyCardDrawn = false;
 const skillCardData = [
     {},
     {},
@@ -17,8 +18,9 @@ const restingDistance = -100;
 const drawDistance = -120;
 
 function hover({target}, index){
+    if (isAnyCardDrawn) return;
 
-    console.log('sheeeeeeeeeeeeeeeesh');
+    // console.log('sheeeeeeeeeeeeeeeesh');
     let angleDeg = getCardRotationDeg(index);
     // + 90 weil bei einheitskreis 0 rechts ist wir aber 0 oben haben
     let vector = vectorFromAngle(angleDeg + 90);
@@ -49,6 +51,28 @@ function getCardRotationDeg(index){
     const startAngle = -30;
     const angleStep = 20;
     return startAngle + angleStep*index;
+}
+
+function drawCard({target}, index){
+
+    const tl = gsap.timeline();
+
+    // tl.to()
+
+    isAnyCardDrawn = true;
+
+    let notTargets = skillCardRefs.value.filter(ref => ref != target);
+    console.log(notTargets);
+
+    tl.to(target, {
+        rotation: 0,
+        translateY: -300,
+        translateX: 0,
+        // scale: 3,
+    })
+    tl.to(notTargets, {
+        translateY: -50,
+    }, 0)
 }
 
 onMounted(()=>{
@@ -93,11 +117,11 @@ onMounted(()=>{
 
 <template>
 
-<div class="w-1/2 soos ">
+<div class="w-1/2 soos bg-orange-500">
       <svg
    class="w-full"
 
-   viewBox="-200 -250 400 500"
+   viewBox="-150 -400 400 500"
 
 
 >
@@ -105,6 +129,7 @@ onMounted(()=>{
     <rect v-for="(data, index) in skillCardData" 
         @mouseenter="hover($event, index)"
         @mouseleave="hover($event, index)"
+        @click="drawCard($event, index)"
      ref="skillCardRefs" x="0" y="0" width="100" height="160" class="sus" fill="yellow" stroke="black" />
   <!-- <circle cx="0" cy="0" r="50" ></circle> -->
 </svg>
