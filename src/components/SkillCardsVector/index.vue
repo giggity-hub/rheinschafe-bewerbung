@@ -48,33 +48,62 @@ const restingCardTranslateY = (index) => restingCards[index].translateY;
 
 // console.log(restingCards);
 
+let hoverAnimations = []
+// for (let index = 0; index < 4; index++) {
+//     let animation = gsap.to({
+//         translateY: isHover[index] ? -20 : 0,
+//         duration: .5,
+//         paused: true,
+//     })
+//     hoverAnimations.push(animation)
+    
+// }
 
-function hover({target}, index){
+
+
+function hover(event, index){
     if (isAnyCardDrawn) return;
-
-    isHover[index] = !isHover[index];
-    let restingCard = restingCards[index]
-    let distance = isHover[index] ? drawDistance : restingDistance;
-
+    const target= skillCardFrontRef.value[index];
     gsap.to(target, {
-        translateX: distance * restingCard.vectorX,
-        translateY: distance * restingCard.vectorY,
+        // translateX: distance * restingCard.vectorX,
+        // translateY: distance * restingCard.vectorY,
+        translateY: -20,
         duration: .5,
+        // paused: true,
     })
 }
 
+function unHover(index){
+    const target= skillCardFrontRef.value[index];
+    gsap.to(target, {
+        // translateX: distance * restingCard.vectorX,
+        // translateY: distance * restingCard.vectorY,
+        translateY: 0,
+        duration: .3,
+        // paused: true,
+    })
+}
+
+let tl = gsap.timeline();
 
 function drawCard(event, index){
-    if (isAnyCardDrawn) return;
+    
+    if (isAnyCardDrawn){
+        tl.eventCallback('onReverseComplete', ()=>{
+            console.log('soooooooooooooooos?/');
+            isAnyCardDrawn = false;
+        })
+        tl.reverse();
+        
+        return;
+    }
+    event.stopPropagation();
 
     let target = skillCardRefs.value[index];
     let frontFace = skillCardFrontRef.value[index];
     let backFace = skillCardBackRef.value[index];
 
-
-    
-
-    const tl = gsap.timeline();
+    tl = gsap.timeline();
 
     // tl.to()
 
@@ -96,33 +125,26 @@ function drawCard(event, index){
         translateX: '+=50', //half card width
         transformOrigin: 'center',
         ease: "power3.in",
+        // skewY: 50,
     })
     // show backside;
     tl.fromTo(backFace, {
-        translateX: 50
+        translateX: 50,
+        // skewY: -50,
     },{
         translateX: 0,
+        // skewY: 0,
         width: 100,
         ease: "power3.out"
     })
-    // tl.to(backFace, {
-    //     width: 100,
-    // })
-
-    // // translate card according to their angle
-    // tl.to(notTargets, {
-    //     translateY: '+=200',
-    // }, 0)
-
-    // scale the card
-    // tl.to(target, {
-    //     scale: 3,
-    //     transformOrigin: 'center'
-    // })
 
 }
 
 onMounted(()=>{
+
+
+
+
     console.log(skillCardFrontRef.value);
     console.log(skillCardBackRef.value);
     gsap.to(skillCardRefs.value, {
@@ -134,17 +156,26 @@ onMounted(()=>{
         duration: 0,
     })
 })
+
+function soos(){
+    console.log('saaaaaaaas');
+}
 </script>
 
 <template>
 
 <div class="w-1/2 soos bg-orange-500">
       <svg
+      @click="soos"
    class="w-full"
 
    viewBox="-150 -400 400 500"
 >
-
+<filter id="f3" x="0" y="0" width="200%" height="200%">
+      <feOffset result="offOut" in="SourceAlpha" dx="20" dy="-20" />
+      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
+      <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+    </filter>
     <!-- <rect v-for="(data, index) in skillCardData" 
         @mouseenter="hover($event, index)"
         @mouseleave="hover($event, index)"
@@ -152,16 +183,19 @@ onMounted(()=>{
      ref="skillCardRefs" x="0" y="0" width="100" height="160" class="sus" fill="yellow" stroke="black" /> -->
 
 
-    <g v-for="(data, index) in skillCardData" ref="skillCardRefs"
+    <g v-for="(data, index) in skillCardData" ref="skillCardRefs" class="shadow"
+        
         @mouseenter="hover($event, index)"
-        @mouseleave="hover($event, index)"
+        @mouseleave="unHover(index)"
         @click="drawCard($event, index)">
 
+        
         <rect ref="skillCardBackRef" width="0" height="160" fill="green" stroke="black" />
-        <rect ref="skillCardFrontRef" width="100" height="160" fill="yellow" stroke="black" />
+        <image preserveAspectRatio="none"  ref="skillCardFrontRef" href="/skill-cards/placeholder.svg" width="100" height="160" alt="" />
+        <!-- <rect ref="skillCardFrontRef" width="100" height="160" fill="yellow" stroke="black" /> -->
         
     </g>
-
+    
   <circle cx="0" cy="0" r="5" ></circle>
 </svg>
 
@@ -170,6 +204,10 @@ onMounted(()=>{
 
 
 <style>
+    .shadow{
+        filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
+        /* border-radius: 5px; */
+    }
     /* rotation */
 
 </style>
