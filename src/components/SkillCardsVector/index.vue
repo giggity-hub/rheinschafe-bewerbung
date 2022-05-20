@@ -122,7 +122,7 @@ function drawCard(event, index){
     tl.to(frontFace, {
         // skewY: -50,
         width: 0,
-        translateX: '+=50', //half card width
+        translateX: 50, //half card width
         transformOrigin: 'center',
         ease: "power3.in",
         // skewY: 50,
@@ -185,13 +185,15 @@ function soos(){
 
     <g v-for="(data, index) in skillCardData" ref="skillCardRefs" class="shadow"
         
-        @mouseenter="hover($event, index)"
-        @mouseleave="unHover(index)"
+
         @click="drawCard($event, index)">
 
+        <g class="hover-group">
+            <rect ref="skillCardBackRef" width="0" height="160" fill="green" stroke="black" />
+            <image class="face--front" preserveAspectRatio="none"  ref="skillCardFrontRef" href="/skill-cards/placeholder.svg" width="100" height="160" alt="" />
+            <rect width="100" height="160" fill="transparent"></rect>
+        </g>
         
-        <rect ref="skillCardBackRef" width="0" height="160" fill="green" stroke="black" />
-        <image preserveAspectRatio="none"  ref="skillCardFrontRef" href="/skill-cards/placeholder.svg" width="100" height="160" alt="" />
         <!-- <rect ref="skillCardFrontRef" width="100" height="160" fill="yellow" stroke="black" /> -->
         
     </g>
@@ -209,5 +211,11 @@ function soos(){
         /* border-radius: 5px; */
     }
     /* rotation */
+
+    /* .hover-group */
+
+    .hover-group:hover{
+        transform: translateY(-5%);
+    }
 
 </style>
