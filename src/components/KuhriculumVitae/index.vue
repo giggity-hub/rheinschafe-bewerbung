@@ -67,25 +67,9 @@ function changeHandler(e){
 
 </div>
 <section class="bg-green-400 relative flex items-stretch flex-col-reverse md:flex-row">
-    
-    <!-- <iframe src="kuhriculum-vitae.html" class="w-full"></iframe> -->
-    <!-- kartenstapel -->
-    <div>
-        <div class="card-wrapper w-50 h-30 ">
-            <div class="card" @click="flip" :class="{flipped: flipped}">
-                <div class="card__side card__side--back ">
-                    hallol breee
-                </div>
-                <div class="card__side card__side--front ">
-                    hallol bro
-                </div>
-                
-            </div>
-        </div>
 
-        
-    </div>
-    <div class="w-full sticky self-start top-0 text-6xl py-10 px-10">
+  
+    <div class="w-full self-start top-0 text-6xl py-10 px-10">
         <h1>{{selectedOccupation.title}}</h1>
         <p class="text-3xl">{{selectedOccupation.text}}</p>
     </div>

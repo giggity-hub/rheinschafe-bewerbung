@@ -1,6 +1,9 @@
 <template>
     <div class="flex flex-col md:flex-row">
         <div class="bg-green-500 w-full">
+            <svg>
+                
+            </svg>
             sdfgsdfgs
         </div>
         <div class="bg-orange-400 w-full character-model">

@@ -8,13 +8,15 @@ import CuriculumVitae from './components/CuriculumVitae.vue';
 import KuhriculumVitae from './components/KuhriculumVitae/index.vue';
 import SkillCards from './components/SkillCards/index.vue';
 import SkillCardsVector from './components/SkillCardsVector/index.vue';
+import Stats from './components/Stats/index.vue';
 </script>
 
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Hello Vue 3 + Vite" /> -->
   <Hero/>
-  <IchBin/>
+  <!-- <IchBin/> -->
+  <Stats/>
   <!-- <CuriculumVitae/> -->
   <KuhriculumVitae/>
   <!-- <SkillCards/> -->

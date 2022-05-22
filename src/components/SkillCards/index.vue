@@ -192,7 +192,7 @@ import { onMounted, reactive, ref } from 'vue';
 
 </template>
 
-<style>
+<style scoped>
 .aspect-ratio-box{
     /* 15:10 Aspect Ratio */
     padding-top: 150%;

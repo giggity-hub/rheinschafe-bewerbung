@@ -1,5 +1,4 @@
 <script setup>
-import anime from 'animejs/lib/anime.es.js';
 import { onMounted, ref } from 'vue';
 import gsap from "gsap";
 
@@ -9,36 +8,28 @@ const skillCardBackRef = ref([]);
 
 const selectedCardIndex = ref(-1);
 const skillCardData = [
-    {},
-    {},
-    {},
-    {}
+    {
+        title: "Design",
+        front: "/skill-cards/placeholder.svg" ,
+        back: "/skill-cards/design/back.svg",    
+    },
+    {
+        title: "Frontend",
+        front: "/skill-cards/placeholder.svg" ,
+        back: "/skill-cards/frontend/back.svg",
+    },
+    {
+        title: "Data Science",
+        front: "/skill-cards/placeholder.svg" ,
+        back: "/skill-cards/data-science/back.svg",
+    },
+    {
+        title: "Backend",
+        front: "/skill-cards/placeholder.svg" ,
+        back: "/skill-cards/design/back.svg",
+    }
 ]
 
-const restingCards = [];
-const restingDistance = -100;
-
-for (let angle=-30; angle <=30; angle+=20) {
-    // + 90 deg weil einheitskreis 0 rechts hat bei uns 0 aber oben
-    let angleRad = (angle + 90) * (Math.PI / 180); 
-    let vectorX = Math.cos(angleRad);
-    let vectorY = Math.sin(angleRad);
-
-    restingCards.push({
-        vectorX,
-        vectorY,
-        translateX: vectorX * restingDistance,
-        translateY: vectorY * restingDistance,
-        angleDeg: angle,
-        angleRad,
-    })
-}
-
-const restingCardAngle = (index) => restingCards[index].angleDeg;
-// const restingCardVectorX = (index) => restingCards[index].x;
-// const restingCardVectorY = (index) => restingCards[index].y;
-const restingCardTranslateX = (index) => restingCards[index].translateX;
-const restingCardTranslateY = (index) => restingCards[index].translateY;
 
 
 let tl = gsap.timeline();
@@ -115,13 +106,23 @@ function drawCard(event, index){
 }
 
 onMounted(()=>{
-    gsap.to(skillCardRefs.value, {
-        stagger: 0,
-        rotation: restingCardAngle,
-        translateX: restingCardTranslateX,
-        translateY: restingCardTranslateY,
-        transformOrigin: "bottom",
-        duration: 0,
+
+    let rotationStart = -30;
+    let rotationStep = 20;
+    const restingDistance = -100;
+    skillCardRefs.value.forEach((target, index)=>{
+        let angleDeg = rotationStart + rotationStep*index;
+        let angleRad = (angleDeg + 90) * (Math.PI / 180);
+        let vectorX = Math.cos(angleRad);
+        let vectorY = Math.sin(angleRad);
+
+        gsap.to(target, {
+            rotation: angleDeg,
+            translateX: vectorX * restingDistance,
+            translateY: vectorY * restingDistance,
+            transformOrigin: "bottom",
+            duration: 0,
+        })
     })
 })
 </script>
@@ -129,43 +130,20 @@ onMounted(()=>{
 <template>
 
 <div class="w-1/2 soos bg-orange-500">
-      <svg
-      @click="soos"
-   class="w-full"
-
-   viewBox="-150 -450 400 550"
->
-<filter id="f3" x="0" y="0" width="200%" height="200%">
-      <feOffset result="offOut" in="SourceAlpha" dx="20" dy="-20" />
-      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
-      <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
-    </filter>
-    <!-- <rect v-for="(data, index) in skillCardData" 
-        @mouseenter="hover($event, index)"
-        @mouseleave="hover($event, index)"
-        @click="drawCard($event, index)"
-     ref="skillCardRefs" x="0" y="0" width="100" height="160" class="sus" fill="yellow" stroke="black" /> -->
-
-
+<svg class="w-full" viewBox="-150 -450 400 550">
     <g v-for="(data, index) in skillCardData" ref="skillCardRefs" class="shadow skill-card" :class="{'is-selected': selectedCardIndex === index}"
-        
-
         @click="drawCard($event, index)">
 
         <g class="hover-group">
-            <rect ref="skillCardBackRef" width="0" height="160" fill="green" stroke="black" />
+            <text transform="translate(50, -10)" class="card__title" >{{data.title}}</text>
+            <image width="0" :href="data.back" ref="skillCardBackRef"  height="160" preserveAspectRatio="none" ></image>
             <image class="face--front" preserveAspectRatio="none"  ref="skillCardFrontRef" href="/skill-cards/placeholder.svg" width="100" height="160" alt="" />
-            
         </g>
         <rect width="100" height="160" fill="transparent"></rect>
-        <!-- <rect ref="skillCardFrontRef" width="100" height="160" fill="yellow" stroke="black" /> -->
-        
     </g>
-    
-  <circle cx="0" cy="0" r="5" ></circle>
 </svg>
 
-  </div>
+</div>
 </template>
 
 
@@ -189,4 +167,20 @@ onMounted(()=>{
         transform: none;
     }
 
+    .card__title{
+        fill: red;
+        text-anchor: middle;
+        position: absolute;
+        opacity: 0;
+        transition: opacity .4s ease;
+        /* transform: translateX(50%); */
+        /* text-align: center; l*/
+        /* width: 100%; */
+    }
+    .skill-card:hover .card__title{
+        opacity: 1;
+    }
+    .skill-card.is-selected .card__title{
+        opacity: 0;
+    }
 </style>
