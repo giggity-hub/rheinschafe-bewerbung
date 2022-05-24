@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="54.999744mm"
+   height="9.5393667mm"
+   viewBox="0 0 54.999744 9.5393667"
+   version="1.1"
+   id="svg5"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <style
+     id="style2740">.star-stroke {  }
+</style>
+  <defs
+     id="defs2" />
+  <g
+     id="layer1">
+    <rect
+       style="fill:#ffff00;stroke-width:1.133;stroke-linecap:round"
+       id="stars-fill"
+       width="54.999744"
+       height="9.5218992"
+       x="0"
+       y="0" />
+    <path
+       id="background"
+       style="opacity:1;fill:#000080;fill-opacity:1;stroke:none;stroke-width:3.75536;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 0,0 V 35.988281 H 207.87305 V 0 Z m 62.328125,4.5449219 4.537109,9.1093751 10.076172,1.427734 -7.259765,7.128907 1.755859,10.023437 -9.025391,-4.701172 -8.990234,4.767578 1.683594,-10.037109 -7.3125,-7.076172 10.064453,-1.5 z m 41.576175,0 4.53711,9.1093751 10.07617,1.427734 -7.26172,7.128907 1.75586,10.023437 -9.02344,-4.701172 -8.990233,4.767578 1.683594,-10.037109 -7.314453,-7.076172 10.066406,-1.5 z m 41.57422,0 4.5371,9.1093751 10.07618,1.427734 -7.26172,7.128907 1.75781,10.023437 -9.02539,-4.701172 -8.99023,4.767578 1.68359,-10.037109 -7.31445,-7.076172 10.0664,-1.5 z m 41.57421,0 4.53711,9.1093751 10.07618,1.427734 -7.26172,7.128907 1.75781,10.023437 -9.02539,-4.701172 -8.99024,4.767578 1.6836,-10.037109 -7.3125,-7.076172 10.06445,-1.5 z m -166.298824,0.066406 4.53711,9.1093751 10.076172,1.425781 -7.261719,7.13086 1.757812,10.023437 -9.02539,-4.701172 -8.990235,4.767579 1.683594,-10.03711 -7.3125,-7.076172 10.064453,-1.5 z"
+       transform="scale(0.26458333)" />
+    <path
+       style="opacity:1;fill:none;stroke:#ff0000;stroke-width:12.6567;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path927"
+       d="M 43.066969,216.02946 14.675321,201.23531 -13.607403,216.23665 -8.3108347,184.66294 -31.317793,162.40014 0.34731412,157.68067 14.410956,128.92016 28.6845,157.57707 60.383267,162.06491 37.539695,184.49533 Z"
+       transform="matrix(0.0841046,0,0,0.0841046,4.2790917,-9.6226567)"
+       class="star-stroke" />
+    <path
+       style="opacity:1;fill:none;stroke:#ff0000;stroke-width:12.6567;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path927-6"
+       transform="matrix(0.0841046,0,0,0.0841046,15.279092,-9.6401556)"
+       d="M 43.066969,216.02946 14.675321,201.23531 -13.607403,216.23665 -8.3108347,184.66294 -31.317793,162.40014 0.34731412,157.68067 14.410956,128.92016 28.6845,157.57707 60.383267,162.06491 37.539695,184.49533 Z"
+       class="star-stroke" />
+    <path
+       style="opacity:1;fill:none;stroke:#ff0000;stroke-width:12.6567;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path1223"
+       transform="matrix(0.0841046,0,0,0.0841046,26.279092,-9.6401556)"
+       d="M 43.066969,216.02946 14.675321,201.23531 -13.607403,216.23665 -8.3108347,184.66294 -31.317793,162.40014 0.34731412,157.68067 14.410956,128.92016 28.6845,157.57707 60.383267,162.06491 37.539695,184.49533 Z"
+       class="star-stroke" />
+    <path
+       style="opacity:1;fill:none;stroke:#ff0000;stroke-width:12.6567;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path1225"
+       transform="matrix(0.0841046,0,0,0.0841046,37.279092,-9.6401556)"
+       d="M 43.066969,216.02946 14.675321,201.23531 -13.607403,216.23665 -8.3108347,184.66294 -31.317793,162.40014 0.34731412,157.68067 14.410956,128.92016 28.6845,157.57707 60.383267,162.06491 37.539695,184.49533 Z"
+       class="star-stroke" />
+    <path
+       style="opacity:1;fill:none;stroke:#ff0000;stroke-width:12.6567;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path1227"
+       transform="matrix(0.0841046,0,0,0.0841046,48.279092,-9.6401556)"
+       d="M 43.066969,216.02946 14.675321,201.23531 -13.607403,216.23665 -8.3108347,184.66294 -31.317793,162.40014 0.34731412,157.68067 14.410956,128.92016 28.6845,157.57707 60.383267,162.06491 37.539695,184.49533 Z"
+       class="star-stroke" />
+  </g>
+</svg>
